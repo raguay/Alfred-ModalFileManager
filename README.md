@@ -1,2 +1,10 @@
-# Alfred-ModalFileManager
-This is an expansion plugin for the Modal File Manager to action items in the Alfred macOS application.
+## Alfred Extension for Modal File Manager
+
+This is an extension to [Modal File Manager](): a file manager with modal keyboard commands similar 
+Vim. This extension will set the `normal` keymap command 'a' to open the current entry in the file 
+manager (a directory or a file) to Alfred to show in the browser. Then you can use Alfred to run 
+actions on that item.
+
+This extension is for macOS only since Alfred is only on macOS.
+
+
