@@ -6,10 +6,12 @@ var alfred = {
     // setting up references to variables that are used.
     //
     alfred.extMan = extManager;
-    alfred.extMan.getCommands().addCommand('Open in Alfred','Open the current entry in the Alfred browser.', alfred.openInAlfred);
-    alfred.extMan.getExtCommand('addKeyboardShort').command('normal',false,false,false,'a', alfred.openInAlfred);
+    alfred.extMan.getCommands().addCommand('Open in Alfred', 'alfred.open','Open the current entry in the Alfred browser.', alfred.open);
   },
-  openInAlfred: function() {
+  installKeyMaps: function() {
+    alfred.extMan.getExtCommand('addKeyboardShort').command('normal',false,false,false,'a', alfred.open);
+  },
+  open: function() {
     //
     // This command will open the current cursor in the Alfred browser.
     //
